@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2019 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <!-- Update the db with new hotseat items.  Note that we reference the browser's original
+         package name. -->
+    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+        
+    <resolve
+        launcher:container="-101"
+        launcher:screen="0"
+        launcher:cellX="0"
+        launcher:cellY="0"
+        launcher:spanX="1"
+        launcher:spanY="1">
+        <favorite launcher:uri="#Intent;action=android.intent.action.DIAL;end" />
+        <favorite launcher:uri="tel:123" />
+        <favorite launcher:uri="#Intent;action=android.intent.action.CALL_BUTTON;end" />
+    </resolve>
+
+    <resolve
+        launcher:container="-101"
+        launcher:screen="1"
+        launcher:cellX="1"
+        launcher:cellY="0"
+        launcher:spanX="1"
+        launcher:spanY="1">
+        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MESSAGING;end" />
+        <favorite launcher:uri="sms:" />
+        <favorite launcher:uri="smsto:" />
+        <favorite launcher:uri="mms:" />
+        <favorite launcher:uri="mmsto:" />
+    </resolve>
+
+    <favorite
+        launcher:container="-101"
+        launcher:screen="2"
+        launcher:cellX="2"
+        launcher:cellY="0"
+        launcher:spanX="1"
+        launcher:spanY="1"
+        launcher:packageName="cat.orb.chat"
+        launcher:className="cat.orb.chat.ui.ConversationActivity"/>
+
+    <favorite
+        launcher:container="-101"
+        launcher:screen="3"
+        launcher:cellX="3"
+        launcher:cellY="0"
+        launcher:spanX="1"
+        launcher:spanY="1"
+        launcher:packageName="com.wireguard.android"
+        launcher:className="com.wireguard.android.activity.MainActivity"/>
+    
+    <favorite
+        launcher:container="-101"
+        launcher:screen="4"
+        launcher:cellX="4"
+        launcher:cellY="0"
+        launcher:spanX="1"
+        launcher:spanY="1"
+        launcher:packageName="com.android.settings"
+        launcher:className="com.android.settings.homepage.SettingsHomepageActivity"/>
+    
+    <resolve
+        launcher:container="-100"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="-1"  >
+        <favorite
+            launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_BROWSER;end" />
+        <favorite launcher:uri="http://www.example.com/" />
+    </resolve>
+
+    <favorite
+        launcher:container="-100"
+        launcher:screen="0"
+        launcher:x="1"
+        launcher:y="-1"
+        launcher:packageName="com.android.contacts"
+        launcher:className="com.android.contacts.activities.PeopleActivity"/>
+
+    <resolve
+        launcher:container="-100"
+        launcher:screen="0"
+        launcher:x="2"
+        launcher:y="-1" >
+	    <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_GALLERY;end" />
+	    <favorite launcher:uri="#Intent;type=images/*;end" />
+    </resolve>
+
+    <resolve
+        launcher:container="-100"
+        launcher:screen="0"
+        launcher:x="3"
+        launcher:y="-1" >
+        <favorite launcher:uri="#Intent;action=android.media.action.STILL_IMAGE_CAMERA;end" />
+        <favorite launcher:uri="#Intent;action=android.intent.action.CAMERA_BUTTON;end" />
+    </resolve>
+
+    <favorite
+        launcher:container="-100"
+        launcher:screen="0"
+        launcher:x="4"
+        launcher:y="-1"
+        launcher:packageName="org.fdroid.fdroid"
+        launcher:className="org.fdroid.fdroid.views.main.MainActivity"/>
+
+</favorites>
